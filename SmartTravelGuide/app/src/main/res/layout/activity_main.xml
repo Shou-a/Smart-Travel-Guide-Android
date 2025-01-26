@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        app:title="Smart Travel Guide"
+        android:background="#FF00401A"
+        app:titleTextColor="@color/white"
+
+        />
+
+    <com.google.android.material.circularreveal.CircularRevealFrameLayout
+        android:id="@+id/main_container"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="70dp"
+        android:layout_marginTop="45dp"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="20dp"
+        >
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/autoComplete_bar"
+            android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".MainActivity"
+            android:tag="autoCompleteBar"
+            />
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:menu="@menu/nav_items"
+        app:labelVisibilityMode="selected"
+        android:layout_alignParentBottom="true"
+        android:background="#FF00401A"
+        style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+
+        />
+
+
+
+
+
+</RelativeLayout>

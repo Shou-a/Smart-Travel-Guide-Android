@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/map_Container"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".frag_map">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/google_map_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        tools:context=".MainActivity"
+        />
+
+    <RelativeLayout
+        android:id="@+id/DisDurHolder"
+        android:layout_marginTop="80dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:padding="5dp"
+        android:background="@drawable/custom_border"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:id="@+id/distanceDisp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Distance :"
+            android:textSize="15dp"
+            android:drawableLeft="@drawable/round_arrow_outward_24"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/durationDisp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Duration :"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:drawableLeft="@drawable/outline_access_time_24"
+            android:layout_toRightOf="@+id/distanceDisp"
+            android:layout_marginLeft="35dp"
+
+            />
+    </RelativeLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_Location"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="10dp"
+        app:background="@drawable/location_searching"
+        app:backgroundTint="#FF00401A"
+        app:icon="@drawable/location_searching"
+        app:iconSize="30dp"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:tooltipText="Current Location !"
+
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_Direction"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/btn_Location"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="60dp"
+        android:layout_marginEnd="10dp"
+        app:background="@drawable/location_searching"
+        app:backgroundTint="#FF00401A"
+        app:icon="@drawable/directions"
+        app:iconSize="30dp"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:tooltipText="Search Direction !"
+        android:visibility="gone"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_viewType"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginStart="10dp"
+        app:background="@drawable/location_searching"
+        app:backgroundTint="#FF00401A"
+        app:icon="@drawable/baseline_remove_red_eye_24"
+        app:iconSize="30dp"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:tooltipText="Current Location !"
+
+        />
+
+</RelativeLayout>

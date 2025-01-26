@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/weather_Container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".frag_weather"
+    >
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="15dp"
+        >
+
+        <ListView
+            android:id="@+id/weather_list"
+            android:divider="@null"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="80dp"
+
+            />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/frag_weather_watermark"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_marginTop="0dp"
+        android:background="@color/white"
+
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_centerInParent="true"
+            >
+            <ImageView
+                android:id="@+id/weather_notFound"
+                android:layout_width="100dp"
+                android:layout_height="110dp"
+                android:background="@drawable/find_location"
+                android:layout_gravity="center"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="No Location is Not Selected to Show Weather"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:textStyle="italic"
+                android:textSize="15dp"
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</FrameLayout>
